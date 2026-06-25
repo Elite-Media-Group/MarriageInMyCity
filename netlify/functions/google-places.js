@@ -2,7 +2,7 @@ exports.handler = async function(event) {
   if (event.httpMethod !== 'POST') return { statusCode: 405, body: JSON.stringify({ error: 'Method not allowed' }) };
   try {
     const { city, location, style, kind } = JSON.parse(event.body || '{}');
-  const searchLocation = location || searchLocation || '';
+    const searchLocation = location || city || '';
     if (!city) return { statusCode: 400, body: JSON.stringify({ error: 'City is required' }) };
     const key = process.env.GOOGLE_MAPS_API_KEY;
     const label = kind === 'vendor' ? 'vendor' : 'venue';
