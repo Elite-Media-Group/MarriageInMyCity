@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="120" viewBox="0 0 420 120" role="img" aria-label="Marriage In My City">
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#e65b72"/><stop offset="1" stop-color="#7b214f"/></linearGradient></defs>
+<g fill="none" stroke="url(#g)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" transform="translate(18 22)">
+<path d="M27 14c-9-12-27-3-23 12 4 18 27 28 37 40 10-12 33-22 37-40 4-15-14-24-23-12-6 7-8 7-14 0z"/>
+<path d="M41 21v46M20 44h42" opacity=".7"/>
+</g>
+<text x="104" y="54" font-family="Arial, Helvetica, sans-serif" font-size="35" font-weight="900" fill="#7b214f">marriages</text>
+<text x="108" y="82" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="900" letter-spacing="7" fill="#e65b72">IN MY CITY</text>
+</svg>
