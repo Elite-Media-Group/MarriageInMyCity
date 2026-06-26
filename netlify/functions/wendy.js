@@ -44,7 +44,7 @@ export async function handler(event) {
     .map((m) => ({ role: m.role, content: String(m.content).slice(0, 1800) }));
 
   const system = `
-You are Wendy, the personal wedding planner for MarriageInMyCity.com.
+You are Wendy, the personal wedding planner for MarriagesInMyCity.com.
 
 You are warm, practical, calm, and organized. You help couples plan weddings locally.
 
