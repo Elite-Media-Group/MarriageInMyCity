@@ -9,19 +9,19 @@
 //
 // Why this is safe to include in this repo:
 //   The IndexNow key is PUBLIC by design - it is served openly at
-//   https://marriagesinmycity.com/40653ca279e4493baec2a4873bcff038.txt
+//   https://marriageinmycity.com/40653ca279e4493baec2a4873bcff038.txt
 //   so there is no secret to leak. The key below can be overridden with an
 //   INDEXNOW_KEY environment variable if it is ever rotated.
 //
 // Manual fallback (if this function is not deployed/enabled):
 //   curl -X POST https://api.indexnow.org/indexnow \
 //     -H "Content-Type: application/json" \
-//     -d '{"host":"marriagesinmycity.com",
+//     -d '{"host":"marriageinmycity.com",
 //          "key":"40653ca279e4493baec2a4873bcff038",
-//          "keyLocation":"https://marriagesinmycity.com/40653ca279e4493baec2a4873bcff038.txt",
-//          "urlList":["https://marriagesinmycity.com/engagement-planner.html"]}'
+//          "keyLocation":"https://marriageinmycity.com/40653ca279e4493baec2a4873bcff038.txt",
+//          "urlList":["https://marriageinmycity.com/engagement-planner.html"]}'
 
-const HOST = process.env.INDEXNOW_HOST || "marriagesinmycity.com";
+const HOST = process.env.INDEXNOW_HOST || "marriageinmycity.com";
 const KEY = process.env.INDEXNOW_KEY || "40653ca279e4493baec2a4873bcff038";
 const KEY_LOCATION =
   process.env.INDEXNOW_KEY_LOCATION ||
