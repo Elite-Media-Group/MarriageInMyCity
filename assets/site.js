@@ -1,3 +1,23 @@
+/* Google Analytics 4 - installed sitewide via shared site.js (not per-page <head>). */
+(function(){
+  var GA_ID = 'G-ZTG56RYGFR';
+  // Idempotency: do nothing if GA for this ID (or any gtag.js loader) is already present.
+  var already = window.gaLoaded === true
+    || (window.dataLayer && window.dataLayer.some && window.dataLayer.some(function(a){ return a && a[0]==='config' && a[1]===GA_ID; }))
+    || !!document.querySelector('script[src*="googletagmanager.com/gtag/js"]');
+  if (already) { return; }
+  window.gaLoaded = true;
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA_ID);
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  window.gtag = window.gtag || gtag;
+  gtag('js', new Date());
+  gtag('config', GA_ID);
+})();
+
 
 (function(){
   const forms = document.querySelectorAll('[data-save-plan]');
